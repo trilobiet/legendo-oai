@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://beeldbank.erfgoedcentrumdiep.nl/oai" 
+  xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:skopeo="http://beeldbank.erfgoedcentrumdiep.nl/oai" 
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <element name="skopeo">
+    <complexType>
+      <sequence>
+		<any processContents="skip" minOccurs="0" maxOccurs="unbounded" />
+      </sequence>
+    </complexType>
+  </element>
+</schema>

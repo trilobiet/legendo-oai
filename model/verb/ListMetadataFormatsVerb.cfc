@@ -1,0 +1,40 @@
+
+<cfcomponent displayname="ListMetadataFormatsVerb" extends="AbstractVerb" output="false">
+
+	<cffunction name="configure" access="public" output="false" returntype="any">
+	
+		<cfargument name="gateway" type="legendoai.model.gateway.AbstractGateway" required="true" />
+		<cfargument name="params" type="struct" required="true" />
+
+		<cfset variables.instance.gateway = arguments.gateway />
+		<cfset variables.instance.requestparams = arguments.params />
+		<cfset variables.allowedParams = "" />
+		
+		<cfset initParams()/>
+		
+		<cfreturn this/>
+	
+	</cffunction>
+
+	<!--- @override --->
+	<cffunction name="validate" access="public" output="false" returntype="boolean">
+		
+		<!--- no params to validate --->
+		<cfreturn NOT hasErrors() />
+
+	</cffunction>	
+	
+	<!--- @override --->
+	<cffunction name="execute" access="public" output="false" returntype="void">
+		
+		<cfset variables.instance.result = variables.instance.gateway.qMetadataFormats() />
+
+	</cffunction>
+	
+	<cffunction name="getName" access="public" output="false" returntype="string">
+		
+		<cfreturn "ListMetadataFormats" />
+		
+	</cffunction>
+
+</cfcomponent>

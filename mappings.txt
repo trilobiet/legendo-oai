@@ -1,0 +1,21 @@
+
+You need a mapping:
+
+Logical Path:			Directory Path:
+/sad/oaiservice  	/var/www/oaiservice  (or whatever it is)
+------------------------------------------------------------------
+
+Railo / Lucee must have file access everywhere, not just webroot
+------------------------------------------------------------------
+
+Create a soft link in the webroot where oai must be available:
+
+ln -s /wwwroot/codebase/legendoai/ /wwwroot/ovm/beeldbank.ovmrotterdam.nl/ROOT/legendoai
+
+Url will be: beeldbank.ovmrotterdam.nl/legendoai/ (NOTE the trailing slash!!!!)
+------------------------------------------------------------------
+
+Go into folder 'domains' and create a sub folder for the domain you are serving.
+Edit the necessary files. 
+------------------------------------------------------------------
+
