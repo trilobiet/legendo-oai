@@ -19,3 +19,6 @@ Go into folder 'domains' and create a sub folder for the domain you are serving.
 Edit the necessary files. 
 ------------------------------------------------------------------
 
+IMPORTANT:
+----------
+Lucee Whitespace Management: Enable Smart Whitespace management.
