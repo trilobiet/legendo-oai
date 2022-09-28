@@ -13,7 +13,7 @@
 		<Identify>
 	
 				<repositoryName>#rc.verb.getResult().repositoryName#</repositoryName>
-				<baseUrl>#getUrl()#</baseUrl>
+				<baseURL>#getUrl()#</baseURL>
 				<protocolVersion>#rc.verb.getResult().protocolVersion#</protocolVersion>
 				<cfloop list="#rc.verb.getResult().adminEmail#" index="r"><adminEmail>#r#</adminEmail></cfloop>
 				<earliestDatestamp>#UTCDateTimeFormat(rc.verb.getResult().earliestDatestamp)#</earliestDatestamp>
